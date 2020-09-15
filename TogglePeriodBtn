@@ -1,0 +1,19 @@
+public class TogglePeriodBtn extends Actor {
+	private int currentPeriod = 3;
+	public int getCurrentPeriod() {
+		return currentPeriod;
+	}
+	public void act() {
+	If (Greenfoot.mousePressed(this)) {
+		If (currentPeriod == 3) {
+			currentPeriod = 2;
+			setImage(“period2.jpg”);
+		}
+		else {
+			currentPeriod = 3;
+			setImage(“period3.jpg”);
+		}
+		getWorld().setPeriod(currentPeriod);
+	}
+	}
+}
